@@ -11,7 +11,7 @@ configurations {
 }
 
 group 'net.okocraft.respawner'
-version '1.0-SNAPSHOT'
+version '1.0.1-SNAPSHOT'
 
 sourceCompatibility = 10
 
@@ -73,7 +73,7 @@ bukkit {
 
         "respawner.respawn" {
             description = "Allows you to run /respawn"
-            setDefault("TRUE")
+            setDefault("OP")
         }
     }
 }

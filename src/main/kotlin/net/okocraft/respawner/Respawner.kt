@@ -15,6 +15,12 @@ import hazae41.minecraft.kutils.bukkit.msg
 class Respawner: JavaPlugin(), TabCompleter {
     override fun onEnable() {
         command("respawn") { sender, args ->
+            if (!sender.hasPermission("respawner.respawn")) {
+                sender.msg("&7* 権限がありません。")
+
+                return@command
+            }
+
             if (args.isEmpty()) {
                 sender.msg("&7* プレイヤーを指定してください。")
 
