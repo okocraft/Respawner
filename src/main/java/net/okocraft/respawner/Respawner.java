@@ -55,13 +55,13 @@ public class Respawner extends JavaPlugin implements CommandExecutor, TabComplet
 		}
 
 		if (!target.isDead()) {
-			sender.sendMessage(getMessage("player-is-alive"));
+			sender.sendMessage(getMessageWithPlayerName("player-is-alive", target.getName()));
 			return false;
 		}
 
 		target.spigot().respawn();
-		sender.sendMessage(getMessage("respawned-player"));
-		target.sendMessage(getMessage("respawned-by"));
+		sender.sendMessage(getMessageWithPlayerName("respawned-player", target.getName()));
+		target.sendMessage(getMessageWithPlayerName("respawned-by", target.getName()));
 		return true;
 	}
 
@@ -81,5 +81,9 @@ public class Respawner extends JavaPlugin implements CommandExecutor, TabComplet
 	private String getMessage(String key) {
 		String fullKey = "messages." + key;
 		return ChatColor.translateAlternateColorCodes('&', config.getString(fullKey, defaultConfig.getString(fullKey)));
+	}
+
+	private String getMessageWithPlayerName(String key, String player) {
+		return getMessage(key).replaceAll("%player_name%", player);
 	}
 }
