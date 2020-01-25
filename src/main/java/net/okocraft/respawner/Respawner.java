@@ -19,6 +19,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.StringUtil;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class Respawner extends JavaPlugin implements CommandExecutor, TabCompleter {
 
 	private FileConfiguration config;
@@ -78,6 +80,6 @@ public class Respawner extends JavaPlugin implements CommandExecutor, TabComplet
 
 	private String getMessage(String key) {
 		String fullKey = "messages." + key;
-		return config.getString(fullKey, defaultConfig.getString(fullKey));
+		return ChatColor.translateAlternateColorCodes('&', config.getString(fullKey, defaultConfig.getString(fullKey)));
 	}
 }
