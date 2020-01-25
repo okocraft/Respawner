@@ -141,3 +141,8 @@ gradle-app.setting
 
 .project
 .classpath
+
+.vscode
+.settings
+
+target/
