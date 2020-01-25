@@ -1,0 +1,6 @@
+messages:
+  specify-player: "&7* プレイヤーを指定してください。"
+  player-not-found: "&7* プレイヤーが見つかりませんでした。"
+  respawned-player: "&7* &b%player_name% &7を復活させました。"
+  respawned-by: "&7* あなたは &b%player_name% &7によって復活させられました。"
+  player-is-alive: "&7* &b%player_name% &7は生きています。"
