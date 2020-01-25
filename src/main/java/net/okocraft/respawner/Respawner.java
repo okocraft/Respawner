@@ -26,7 +26,7 @@ public class Respawner extends JavaPlugin implements CommandExecutor, TabComplet
 
 	@Override
 	public void onEnable() {
-		PluginCommand command = Objects.requireNonNull(getCommand("respawner"));
+		PluginCommand command = Objects.requireNonNull(getCommand("respawn"));
 		command.setExecutor(this);
 		command.setTabCompleter(this);
 		saveDefaultConfig();

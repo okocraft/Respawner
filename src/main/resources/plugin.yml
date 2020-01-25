@@ -1,6 +1,6 @@
 name: ${project.artifactId}
 version: ${project.version}
-main: net.okocraft.respawner.Respawner
+main: ${project.groupId}.${project.artifactId}
 author: LazyGon
 api-version: 1.14
 description: Plugin that implements respawn command.
